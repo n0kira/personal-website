@@ -14,10 +14,6 @@ a {
     color: rgb(221, 198, 255);
 }
 
-h2 {
-    margin: 0;
-}
-
 .description {
     margin: 40px;
     font-size: 25px;
@@ -105,5 +101,7 @@ h2 {
     margin: 0;
 }
 
-
+#social {
+    width: 25px;
+}
 
