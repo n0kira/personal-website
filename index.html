@@ -7,15 +7,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to my website!</h1>
-    <p>I'm nokira from Italy :)</p>
-    <nav>
-        <a href="#about">About Me</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <section id="about"></section>
-    <section id="projects"></section>
-    <section id="contact"></section>
+    <header>
+        <nav id="navbar">
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <h1>Welcome to my website!</h1>
+    </header>
+
+    <div id="content">
+        <br>
+        <section id="about">
+            <table style="padding-left: 20px;">
+                <tr>
+                    <td>
+                        <img id="pfp" src="img/profile.jpg" alt="My Profile Picture!">
+                    </td>
+                    <td>
+                        <p id="description">I'm nokira from Italy :)</p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section id="projects"></section>
+        <section id="contact"></section>
+        <br>
+    </div>
 </body>
 </html>

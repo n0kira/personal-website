@@ -1,0 +1,38 @@
+body {
+    background: #020024;
+    background: linear-gradient(90deg, rgb(34, 40, 49) 25%, rgb(58, 47, 75) 100%);
+    color: rgb(238, 238, 238);
+}
+
+header {
+    text-align: center;
+}
+
+a {
+    color: rgb(201, 164, 255);
+}
+
+#navbar a {
+    padding: 10px; 
+}
+
+#content {
+    background: linear-gradient(135deg, #020024 0%, #230048 100%);
+    border: 2px #120024 solid;
+    text-align: center;
+    margin: auto;
+    max-width: 55%;
+    max-height: 75%;
+    border-radius: 20px;
+}
+
+#pfp {
+    width: 150px;
+    border-radius: 50%;
+    border: 3px #c5c5c5 solid ;
+}
+
+#description {
+    margin: 40px;
+    font-size: 25px;
+}
