@@ -1,4 +1,6 @@
 body {
+    margin: 0;
+    padding: 0;
     background: #020024;
     background: linear-gradient(90deg, rgb(78, 66, 95) 25%, rgb(58, 36, 76) 100%);
     color: rgb(238, 238, 238);
@@ -9,14 +11,19 @@ header {
 }
 
 a {
-    color: rgb(201, 164, 255);
+    color: rgb(221, 198, 255);
 }
 
-#navbar a {
-    padding: 10px; 
+h2 {
+    margin: 0;
 }
 
-#content {
+.description {
+    margin: 40px;
+    font-size: 25px;
+}
+
+.content {
     background: linear-gradient(135deg, rgba(35, 0, 72, 0.4) 0%, rgba(2, 0, 36, 0.4) 100%);
     border: 2px #120024 solid;
     text-align: center;
@@ -25,7 +32,64 @@ a {
     max-height: 75%;
     border-radius: 20px;
     backdrop-filter: blur(10px);
+    margin-bottom: 100px;
+    overflow: hidden;
 }
+
+.single-project {
+    width: 500px;
+
+    background: linear-gradient(135deg, rgba(35, 0, 72, 0.4) 0%, rgba(2, 0, 36, 0.4) 100%);
+    padding: 15px;
+    border-radius: 12px;
+        border: #120024 2px solid;
+}
+
+.single-project img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: #120024 2px solid;
+}
+
+#project-table {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 15px;
+    scroll-behavior: smooth;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#project-table::-webkit-scrollbar {
+    width: 5px;
+}
+
+#project-table::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, rgb(58, 39, 84) 25%, rgb(50, 16, 78) 100%);
+  border: #020024 2px solid;
+  border-radius: 10px;
+}
+
+#navbar {
+    background: linear-gradient(135deg, rgba(69, 51, 93, 0.9) 0%, rgba(45, 15, 70, 0.4) 100%);
+    border: 2px #2b183e solid;
+    backdrop-filter: blur(7px);
+    margin: auto;
+    text-align: center;
+    position: sticky;
+    z-index: 100;
+    padding: 10px;
+    top: 0px;
+}
+
+#navbar a {
+    padding: 10px;
+    font-size: 20px;
+}
+
 
 #pfp {
     width: 150px;
@@ -33,7 +97,13 @@ a {
     border: 3px #c5c5c5 solid ;
 }
 
-#description {
-    margin: 40px;
-    font-size: 25px;
+#discover:hover {
+    cursor: pointer;
 }
+
+#discover {
+    margin: 0;
+}
+
+
+

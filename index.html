@@ -7,18 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav id="navbar">
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
     <header>
-        <nav id="navbar">
-            <a href="#about">About Me</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-
         <h1>Welcome to my website!</h1>
     </header>
 
-    <div id="content">
+    <div class="content">
         <br>
+        <h2>About Me :)</h2>
         <section id="about">
             <table style="padding-left: 20px;">
                 <tr>
@@ -26,14 +26,43 @@
                         <img id="pfp" src="img/profile.jpg" alt="My Profile Picture!">
                     </td>
                     <td>
-                        <p id="description">I'm nokira from Italy :)</p>
+                        <p class="description"> Hello everyone! I am nokira, a 18 years old boy from Italy. Currently I'm studying in high school, aiming to join university and study Computer Engineering.</p>
                     </td>
                 </tr>
             </table>
+            <h3 id="discover" class="description"> Click here to know more!</h3>
+            <p id="details" class="description" style="display: none;"> I started exploring technology when I got my first computer at 11 years old. Since then I always wanted to know more and more about it and so I discovered about the world of programming. I wasn't really good at it though, it felt like learning a new language by just looking at it. During this phase I started learning about web development but it was nothing serious, and I had many many breaks. I then entered high school and here I started studying Computer Science. It finally started to make sense. I was finally understanding. And since that, I kept exploring more and more until this day!</p>
         </section>
-        <section id="projects"></section>
-        <section id="contact"></section>
         <br>
     </div>
+
+    <div class="content">
+        <section id="projects">
+            <p>Projects</p>
+            <div id="project-table">
+                <div class="single-project">
+                    <img class="thumbnail" src="img/MyOwnSite.png" alt="placeholder">
+                    <p>My Own Site!</p>
+                    <p>
+                        <a href="https://github.com/n0kira/personal-website">GitHub</a>
+                        |
+                        <a href="https://n0kira.github.io/personal-website/">Preview</a>
+                    </p>
+                </div>
+                <div class="single-project">
+                    <img class="thumbnail" src="img/placeholder.webp" alt="placeholder">
+                    <p>Coming Soon!!!</p>
+                </div class="single-project">
+            </div>
+        </section>
+    </div>
+
+    <div class="content">
+         <section id="contact">
+            <p>Contact</p>
+         </section>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
