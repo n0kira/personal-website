@@ -5,8 +5,13 @@
 <p>This is my personal website!</p>
 </div>
 
-![Website Preview](img/preview.gif)
+![Website Preview](img/livePreviewOwnSite.gif)
 
 <hr>
 
-# 
+# Built with
+
+- **HTML**, for the structure
+- **CSS**, for styling
+- **JS**, for interactivity
+- **GitHub Pages**, for deployment
