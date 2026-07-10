@@ -14,3 +14,19 @@ discoverBtn.addEventListener("click", () => {
         isActive = false;
     }
 })
+
+
+const videosPreviews = document.querySelectorAll(".thumbnail");
+
+videosPreviews.forEach(video => {
+    video.addEventListener("mouseenter", () => {
+        video.play().catch(error => {
+            console.log("Interact with the page first.")
+        });
+    });
+
+    video.addEventListener("mouseleave", () => {
+        video.pause();
+        video.currentTime = 0;
+    });
+});

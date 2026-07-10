@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <video autoplay loop muted playsinline id="backgroundVideo">
+        <source src="img/background0.mp4" type="video/mp4">
+    </video>
     <nav id="navbar">
         <a href="#about">Home</a>
         <a href="#projects">Projects</a>
@@ -16,7 +19,7 @@
     </nav>
     
     <section id="about">
-    <h1 style="text-align: center;">Welcome to my website!</h1>
+    <h1 style="text-align: center; text-shadow: 3px 1px 1px rgb(0, 0, 0);">Welcome to my website!</h1>
     <div class="content" id="contentAbout">
         <br>
         <h2>About Me :)</h2>
@@ -35,13 +38,23 @@
             <br>
         </div>
     </section>
+
+    <!-- <div class="content">
+        <section id="hobbies">
+            <h2>My Hobbies</h2>
+
+        </section>
+    </div> -->
         
     <div class="content">
         <section id="projects">
             <h2>Projects</h2>
+            <h5>Hover for live preview</h5>
             <div id="project-table">
                 <div class="single-project">
-                    <img class="thumbnail" src="img/livePreviewOwnSite.gif" alt="placeholder">
+                    <video class="thumbnail" preload="metadata">
+                        <source src="img/livePreviewOwnSite.mp4">
+                    </video>
                     <p>My Own Site!</p>
                     <p>
                         <a href="https://github.com/n0kira/personal-website">GitHub</a>
@@ -50,12 +63,35 @@
                     </p>
                 </div>
                 <div class="single-project">
-                    <img class="thumbnail" src="img/livePreviewKittenOS.gif" alt="placeholder">
+                    <video class="thumbnail" preload="metadata">
+                        <source src="img/livePreviewKittenOS.mp4">
+                    </video>
                     <p>KittenOS</p>
                     <p>
                         <a href="https://github.com/n0kira/KittenOS">GitHub</a>
                         |
                         <a href="https://n0kira.github.io/KittenOS/">Preview</a>
+                    </p>
+                </div>
+                <div class="single-project">
+                    <video class="thumbnail" preload="metadata">
+                        <source src="img/mainTabShowcase.mp4">
+                    </video>
+                    <p>MainTab</p>
+                    <p>
+                        <a href="https://github.com/n0kira/MainTab">GitHub</a>
+                        |
+                        <a href="https://n0kira.github.io/MainTab/">Preview</a>
+                    </p>
+                
+                </div>
+                 <div class="single-project">
+                    <video class="thumbnail" preload="metadata">
+                        <source src="img/theLazyOneShowcase.mp4">
+                    </video>
+                    <p>TheLazyOne</p>
+                    <p>
+                        <a href="https://github.com/n0kira/TheLazyOne">GitHub</a>
                     </p>
                 </div>
             </div>

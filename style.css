@@ -4,7 +4,6 @@ body {
     background: #020024;
     background: linear-gradient(90deg, rgb(78, 66, 95) 25%, rgb(58, 36, 76) 100%);
     color: rgb(238, 238, 238);
-    background-image: url(img/background.gif);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -53,14 +52,6 @@ hr {
     border: #120024 2px solid;
 }
 
-.single-project img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: #120024 2px solid;
-}
-
 .social {
     width: 30px;
 }
@@ -79,6 +70,21 @@ hr {
     min-width: 250px;
     text-align: center;
     padding: 10px;
+}
+
+.thumbnail {
+    width: 100%;
+    border: #120024 2px solid;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.thumbnail:hover {
+    transform: translateY(-4px);
+}
+
+.single-project:hover {
+    transform: scale(105%);
 }
 
 #project-table {
@@ -135,4 +141,15 @@ hr {
 
 #contact {
     margin: 12px;
+}
+
+#backgroundVideo {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
 }
