@@ -19,14 +19,18 @@ discoverBtn.addEventListener("click", () => {
 const videosPreviews = document.querySelectorAll(".thumbnail");
 
 videosPreviews.forEach(video => {
-    video.addEventListener("mouseenter", () => {
-        video.play().catch(error => {
-            console.log("Interact with the page first.")
-        });
+    video.addEventListener("mouseenter", (e) => {
+        if (e.target.tagName == "VIDEO") {
+            video.play().catch(error => {
+                console.log("Interact with the page first.")
+            });
+        }
     });
 
-    video.addEventListener("mouseleave", () => {
-        video.pause();
-        video.currentTime = 0;
+    video.addEventListener("mouseleave", (e) => {
+         if (e.target.tagName == "VIDEO") {
+            video.pause();
+            video.currentTime = 0;
+         }
     });
 });
