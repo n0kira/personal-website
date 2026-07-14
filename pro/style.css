@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+
+    background-color: black;
+    color: #FFFFFF;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(255, 255, 255);
+}
+
+#navbar {
+    margin-top: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#navbar p {
+    margin: 0px 12px;
+}
+
+#navbar a:hover {
+    transform: scale(120%);
+    transition: ease 1s;
+}
+
+#aboutMe {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+#aboutMe p {
+    position: inherit;
+    margin: auto 24px;
+}
