@@ -18,20 +18,83 @@
         <a href="#contactMe">Contact me</a>
     </nav>
 
-    <div id="pageContent" style="border: blue solid;">
+    <div id="pageContent">
         <section id="about" style="display: flex;">
-            <div class="section" id="aboutMe" style="border: red solid;">
-                <img src="/img/profile.png" alt="Picture" width="175px">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quam quisquam! Tempore accusantium quam vero sit? Officia necessitatibus distinctio ea facilis illo exercitationem, esse, neque explicabo dicta ex sint quis!</p>
+            <div id="aboutMe" style="display: block;">
+                <div id="persona">
+                    <img src="/img/profile.png" alt="Picture" width="175px">
+                    <p>18 year-old Computer Science student in high-school</p>
+                </div>
+                <div id="description">
+                    <p>Hello! I am Mattia, from Italy. Currently studying in high-school and preparing to join "Politecnico di Milano", one of the top universities in Italy, to study Computer Engineering</p>
+                </div>
             </div>
-            <div id="model3D">
-
+            <div id="model3Dcontainer">
+                <model-viewer 
+                    alt="3D model" 
+                    src="models/character.glb"
+                    disable-zoom
+                    disable-pan
+                    camera-orbit="180deg 60deg 15m"
+                    orientation="10deg 10deg 0"
+                    auto-rotate
+                    auto-rotate-delay="0"
+                    rotation-per-second="25deg"
+                    interaction-prompt="none"
+                    max-camera-orbit="auto auto auto"
+                    id="model3D"
+                ></model-viewer>
             </div>
         </section>
 
+        <section id="tech">
+            <div style="margin: 0 auto; text-align: center; margin-top: 150px;">
+                <h2>Technologies</h2>
+                <div class="tech-row">
+                    <div class="tech-column">
+                        <h3>Core Languages</h3>
+                        <img class="techStack" src="https://skillicons.dev/icons?i=js,java,lua" alt="">
+                    </div>
+                    <div class="tech-column">
+                        <h3>Familiar With</h3>
+                        <img class="techStack" src="https://skillicons.dev/icons?i=cpp,py,flutter,dart" alt="">
+                    </div>
+                </div>
+                
+                <hr>
+
+                <div class="tech-row">
+                    <div class="tech-column">
+                        <h3>Game Engines</h3>
+                        <img class="techStack" src="https://skillicons.dev/icons?i=robloxstudio,godot" alt="">
+                    </div>
+                    <div class="tech-column">
+                        <h3>Other</h3>
+                        <img class="techStack" src="https://skillicons.dev/icons?i=linux,windows,anaconda,arduino" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section id="projects">
-
+           <div id="projectsContent">
+                <h2>Projects</h2>
+                <br>
+                <div id="project-table">
+                    <div class="single-project">
+                        <img class="thumbnail" src="img/KittenOsPreview.png" alt="">
+                        <h3>KittenOS</h3>
+                        <br>
+                        <p>KittenOS is a web simulation of an Operative System with a cat themed interface</p>
+                        <br>
+                        <p>
+                            <a href="https://github.com/n0kira/KittenOS">GitHub</a>
+                            |
+                            <a href="https://n0kira.github.io/KittenOS/">Preview</a>
+                        </p>
+                    </div>
+                </div>
+           </div>
         </section>
 
 
@@ -43,9 +106,12 @@
         <section id="contactMe">
 
         </section>
-
     </div>
 
+    
+
     <script src="script.js"></script>
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
 </body>
 </html>

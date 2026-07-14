@@ -5,9 +5,10 @@
 }
 
 body {
-
     background-color: black;
     color: #FFFFFF;
+    background-image: radial-gradient(white 1px, transparent 0);
+    background-size: 60px 60px;
 }
 
 a {
@@ -19,7 +20,24 @@ a:visited {
     color: rgb(255, 255, 255);
 }
 
+h2 {
+    font-size: 48px;
+}
+
+#pageContent {
+    width: 100vw;
+}
+
 #navbar {
+    position: sticky;
+    top: 5px;
+    background-color: rgba(158, 158, 158, 0.5);
+    border: rgba(174, 174, 174, 0.761) solid 1px;
+    backdrop-filter: blur(3px);
+    border-radius: 12px;
+    padding: 6px;
+    width: 25%;
+    margin: 0 auto;
     margin-top: 12px;
     text-align: center;
     display: flex;
@@ -36,13 +54,131 @@ a:visited {
     transition: ease 1s;
 }
 
-#aboutMe {
-    display: flex;
-    justify-content: center;
-    width: 50%;
+#about {
+    width: 100%;
 }
 
-#aboutMe p {
-    position: inherit;
-    margin: auto 24px;
+#aboutMe {
+    width: 65%;
+}
+
+#persona {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 12%;
+    font-size: 32px;
+    text-align: center;
+}
+
+#description {
+    margin-top: 15%;
+    font-size: 28px;
+}
+
+#description p {
+    margin: auto auto;
+    width: 70%;
+}
+
+#persona p, img {
+    margin: auto auto;
+}
+
+#persona p {
+    width: 35%;
+}
+
+#model3D {
+    margin: 25% 0;
+    width: 100%;
+    height: 500px;
+}
+
+#model3Dcontainer {
+    height: calc(100vh - 100px);
+    width: 30%;
+    margin: 12px;
+    border: 1px solid;
+    backdrop-filter: blur(2px);
+    border-radius: 30px;
+}
+
+#project-table {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 15px;
+    scroll-behavior: smooth;
+    width: 100%;
+    box-sizing: border-box;
+    scrollbar-width: thin; 
+    scrollbar-color: rgb(58, 39, 84) #020024;
+}
+
+#project-table::-webkit-scrollbar {
+    width: 5px;
+}
+
+#project-table::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, rgb(58, 39, 84) 25%, rgb(50, 16, 78) 100%);
+  border: #020024 2px solid;
+  border-radius: 10px;
+}
+
+#project-table::-moz-range-progress {
+    width: 5px;
+}
+
+#project-table::-moz-range-track {
+  background: linear-gradient(90deg, rgb(58, 39, 84) 25%, rgb(50, 16, 78) 100%);
+  border: #020024 2px solid;
+  border-radius: 10px;
+}
+
+#projects {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.techLogo {
+    border-radius: 8px;
+}
+
+.tech-row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+}
+
+.tech-column {
+    min-width: 250px;
+    text-align: center;
+    padding: 10px;
+}
+
+.techStack {
+    margin: 12px;
+}
+
+.single-project {
+    width: 200px;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, rgba(43, 0, 88, 0.4) 0%, rgba(3, 0, 55, 0.4) 100%);
+    padding: 15px;
+    border-radius: 12px;
+    border: #120024 2px solid;
+}
+
+.thumbnail {
+    width: 100%;
+    border: #120024 2px solid;
+    border-radius: 12px;
+    margin: 0;
 }
