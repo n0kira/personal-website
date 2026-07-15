@@ -11,6 +11,10 @@ body {
     user-select: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 header {
     text-align: center;
 }
@@ -23,6 +27,10 @@ hr {
     border: 0;
     border-top: 2px solid #120024;
     margin: 12px 0 0 0;
+}
+
+section {
+    scroll-margin-top: 80px;
 }
 
 .description {
@@ -56,22 +64,6 @@ hr {
     width: 30px;
 }
 
-.techLogo {
-    border-radius: 8px;
-}
-
-.tech-row {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 15px;
-}
-
-.tech-column {
-    min-width: 250px;
-    text-align: center;
-    padding: 10px;
-}
-
 .thumbnail {
     width: 100%;
     border: #120024 2px solid;
@@ -86,6 +78,14 @@ hr {
 
 .single-project:hover {
     transform: scale(105%);
+}
+
+.hobbyPhoto {
+    width: 175px; 
+    height: 175px;
+    object-fit: cover;
+    border-radius: 32px;
+    border: solid black;
 }
 
 #project-table {
@@ -165,4 +165,20 @@ hr {
     object-fit: cover;
     z-index: -1;
     pointer-events: none;
+}
+
+.photosRow {
+    display: flex;
+    justify-content: center;
+}
+
+.photosRow img {
+    margin: 24px;
+    transform: scale(100%);
+    transition: transform 0.8s ease;
+}
+
+.photosRow img:hover {
+    transform: scale(110%);
+    transition: transform 0.6s ease;
 }

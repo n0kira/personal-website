@@ -14,7 +14,7 @@
     <nav id="navbar">
         <a href="#about">Home</a>
         <a href="#projects">Projects</a>
-        <a href="#tech">Technologies</a>
+        <a href="#hobbies">Hobbies</a>
         <a href="#contact">Contact</a>
     </nav>
     
@@ -22,7 +22,7 @@
     <h1 style="text-align: center; text-shadow: 3px 1px 1px rgb(0, 0, 0);">Welcome to my website!</h1>
     <div class="content" id="contentAbout">
         <br>
-        <h2>About Me :)</h2>
+        <h2>About Me :) → <a href="/pro/index.html"><span style="font-size: 12px;">Click here to see my professional side!</a></span></h2>
             <table style="padding-left: 20px;">
                 <tr>
                     <td>
@@ -106,35 +106,33 @@
             </div>
         </section>
     </div>
-
+    
     <div class="content">
-        <section id="tech">
-            <h2>Technologies</h2>
-            <div class="tech-row">
-                <div class="tech-column">
-                    <h3>Core Languages</h3>
-                    <img src="https://skillicons.dev/icons?i=js,html,css,java,lua" alt="">
-                </div>
-                <div class="tech-column">
-                    <h3>Familiar With</h3>
-                    <img src="https://skillicons.dev/icons?i=cpp,py,flutter,dart" alt="">
-                </div>
-            </div>
-            
-            <hr>
+            <section id="hobbies">
+            <h2>My Hobbies</h2>
+            <div>
 
-            <div class="tech-row">
-                <div class="tech-column">
-                    <h3>Game Engines</h3>
-                    <img src="https://skillicons.dev/icons?i=robloxstudio,godot" alt="">
+                <div class="photosRow">
+                    <img src="img/tow.jpg" class="hobbyPhoto">  
+                    <img src="img/porsche.jpg" class="hobbyPhoto">
+                    <img src="img/ferrari.jpg" class="hobbyPhoto">  
                 </div>
-                <div class="tech-column">
-                    <h3>Other</h3>
-                    <img src="https://skillicons.dev/icons?i=linux,windows" alt="">
-                    <img src="https://skillicons.dev/icons?i=anaconda,arduino" alt="">
+
+                <div class="photosRow">
+                    <img src="img/coding.jpg" class="hobbyPhoto">  
+                    <img src="img/math.jpg" class="hobbyPhoto">
+                    <img src="img/robloxCode.jpg" class="hobbyPhoto">  
                 </div>
+
+                <div class="photosRow">
+                    <img src="img/telecom.jpg" class="hobbyPhoto">  
+                    <img src="img/arduino.jpg" class="hobbyPhoto">
+                    <img src="img/laptop.jpg" class="hobbyPhoto">  
+                </div>
+
             </div>
-        </section>
+
+            </section>
     </div>
 
     <div class="content">
@@ -150,5 +148,25 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.36/dist/lenis.min.js"></script>
+
+    <script>
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+    </script>
 </body>
 </html>

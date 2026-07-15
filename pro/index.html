@@ -7,9 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <a href="/index.html" style="position: fixed; padding: 6px;">Click here to go back</a>
     
     <nav id="navbar">
         <a href="#about">About</a>
+        <p>|</p>
+        <a href="#tech">Technologies</a>
         <p>|</p>
         <a href="#projects">Projects</a>
         <p>|</p>
@@ -30,9 +34,10 @@
                 </div>
             </div>
             <div id="model3Dcontainer">
+                <p id="toggleModel"><span class="modelOption selected">Cube</span> | <span class="modelOption">Character</span></p>
                 <model-viewer 
                     alt="3D model" 
-                    src="models/character.glb"
+                    src="models/cube.glb"
                     disable-zoom
                     disable-pan
                     camera-orbit="180deg 60deg 15m"
@@ -99,12 +104,46 @@
 
 
         <section id="education">
-
+            <h2 style="text-align: center;">Education</h2>
+            <div id="timeline">
+                <div class="checkpoint">
+                    <div>
+                        <h2>Competitive Programming</h2>
+                        <h3>OII & OIS Participant</h3>
+                        <span>2024 - 2026</span>
+                        <p>
+                           Took part in the <abbr title="Olimpiadi italiane di informatica individuali">OII</abbr> and <abbr title="Olimpiadi italiane di informatica a squadre">OIS</abbr>  
+                        </p>
+                        <ul>
+                            <li><strong>OII (2024-2025): </strong>Competed individually in the Italian Olympiad in Informatics, advancing to the regional selection phase.</li>
+                            <li><strong>OIS (2025-26): </strong>Competed in the team-based Olympiad, ranking 105th out of over 500 teams.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="checkpoint">
+                    <div>
+                        <h2>ITIS G. Cardano</h2>
+                        <h3>High School Diploma in Computer Science</h3>
+                        <span>2022 - Present</span>
+                        <p>
+                           Studying Computer Science with a focus on software development, networking and system design.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
 
 
         <section id="contactMe">
-
+            <div id="contact">
+                <h2>Contact</h2>
+                <p>Fell free to reach out on any of these platforms!</p>
+                
+                <a href="https://github.com/n0kira" target="_blank"><img class="social" src="https://skillicons.dev/icons?i=github" alt=""></a>
+                <a href="https://discord.com/users/716546397175939092" target="_blank"><img class="social" src="https://skillicons.dev/icons?i=discord" alt=""></a>
+                <a href="https://x.com/n0kira" target="_blank"><img class="social" src="https://skillicons.dev/icons?i=twitter" alt=""></a>
+                <a href="https://www.linkedin.com/in/mattia-dagosta/" target="_blank"><img class="social" src="https://skillicons.dev/icons?i=linkedin" alt=""></a>
+            </div>
         </section>
     </div>
 
@@ -113,5 +152,26 @@
     <script src="script.js"></script>
 
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.36/dist/lenis.min.js"></script>
+
+    <script>
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+    </script>
 </body>
 </html>

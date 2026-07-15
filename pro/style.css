@@ -4,6 +4,10 @@
     border: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: black;
     color: #FFFFFF;
@@ -14,6 +18,10 @@ body {
 a {
     color: #FFFFFF;
     text-decoration: none;
+}
+
+section {
+    scroll-margin-top: 80px;
 }
 
 a:visited {
@@ -43,6 +51,7 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    z-index: 3;
 }
 
 #navbar p {
@@ -72,6 +81,7 @@ h2 {
 }
 
 #description {
+    text-align: center;
     margin-top: 15%;
     font-size: 28px;
 }
@@ -104,6 +114,30 @@ h2 {
     border-radius: 30px;
 }
 
+#toggleModel {
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(214, 214, 214, 0.269);
+    width: 25%;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-top: 12px;
+    padding: 5px;
+    user-select: none;
+}
+
+.modelOption {
+    user-select: none;
+    border-radius: 30px;
+    padding: 5px;
+    transition: background-color 0.5s ease-out, transform 0.3s ease;
+}
+
+.selected {
+    background-color: #0d71fc;
+    font-size: large;
+}
+
 #project-table {
     display: flex;
     justify-content: center;
@@ -113,28 +147,6 @@ h2 {
     scroll-behavior: smooth;
     width: 100%;
     box-sizing: border-box;
-    scrollbar-width: thin; 
-    scrollbar-color: rgb(58, 39, 84) #020024;
-}
-
-#project-table::-webkit-scrollbar {
-    width: 5px;
-}
-
-#project-table::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg, rgb(58, 39, 84) 25%, rgb(50, 16, 78) 100%);
-  border: #020024 2px solid;
-  border-radius: 10px;
-}
-
-#project-table::-moz-range-progress {
-    width: 5px;
-}
-
-#project-table::-moz-range-track {
-  background: linear-gradient(90deg, rgb(58, 39, 84) 25%, rgb(50, 16, 78) 100%);
-  border: #020024 2px solid;
-  border-radius: 10px;
 }
 
 #projects {
@@ -144,6 +156,33 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
+}
+
+#timeline {
+    margin: 5em auto;
+    max-width: 34.15em;
+    position: relative;
+}
+
+#timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    background-color: #888;
+    z-index: 1;
+}
+
+#education {
+    margin-top: 100px;
+}
+
+#contact {
+    margin: 12px;
     text-align: center;
 }
 
@@ -170,15 +209,95 @@ h2 {
 .single-project {
     width: 200px;
     flex-shrink: 0;
-    background: linear-gradient(135deg, rgba(43, 0, 88, 0.4) 0%, rgba(3, 0, 55, 0.4) 100%);
+    backdrop-filter: blur(2px);
     padding: 15px;
     border-radius: 12px;
-    border: #120024 2px solid;
+    border: 1px solid;
 }
 
 .thumbnail {
     width: 100%;
-    border: #120024 2px solid;
+    border: 1px solid;
     border-radius: 12px;
     margin: 0;
+}
+
+.checkpoint {
+    max-width: 34em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    position: relative;
+    z-index: 2;
+}
+
+.checkpoint div {
+    border: 2px solid #888;
+    backdrop-filter: blur(2px);
+    border-radius: 1em;
+    padding: 1.5em;
+}
+
+.checkpoint p, ul{
+    line-height: 27px;
+    color: #ccc;
+}
+
+.checkpoint:nth-child(odd) {
+    padding-left: 3em;
+    transform: translateX(17.075em);
+}
+
+.checkpoint:nth-child(even) {
+    padding-right: 3em;
+    transform: translateX(-17.075em);
+}
+
+
+.checkpoint:nth-child(even)::before {
+    content: '';
+    background-color: #888;
+    width: 3em;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.checkpoint:nth-child(odd)::before {
+    left: 0;
+}
+
+.checkpoint:nth-child(even)::before {
+    right: 0;
+}
+
+.checkpoint:nth-child(odd) div::before, .checkpoint:nth-child(even) div::before {
+    content: '';
+    background-color: #fff;
+    box-shadow: 0 0 0.5em #0d71fc;
+    width: 0.8em;
+    height: 0.8em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.checkpoint:nth-child(odd) div::before {
+    left: -0.5em;
+}
+
+.checkpoint:nth-child(even) div::before {
+    right: -0.5em;
+}
+
+.social {
+    width: 30px;
+    padding: 12px;
+    transition: 300ms;
+}
+
+.social:hover {
+    transform: scale(115%) translateY(-5px);
+    cursor: pointer;
 }
