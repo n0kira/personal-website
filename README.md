@@ -5,7 +5,11 @@
 <p>This is my personal website! Feel free to explore!</p>
 </div>
 
-![Website Preview](img/githubPreview.mp4)
+
+
+https://github.com/user-attachments/assets/ea7bce18-b59b-456d-b619-a3cf1e72798d
+
+
 
 <hr>
 
